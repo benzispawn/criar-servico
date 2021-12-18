@@ -1,0 +1,11 @@
+<nav style="margin-bottom: 20px">
+  <a routerLink="/home">Voltar</a>
+</nav>
+<!--Usar o form abaixo-->
+<form [formGroup]="formGroup">
+  <div *ngFor="let control of elemForm | async">
+    <label for="nome">Nome: </label>
+    <input id="nome" type="text" [formControl]="control">
+  </div>
+</form>
+
